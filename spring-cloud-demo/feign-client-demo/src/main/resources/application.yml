@@ -1,0 +1,39 @@
+server:
+  port: 19091
+
+
+spring:
+  application:
+    name: feign-client-demo
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+
+
+#feign:
+##  开启熔断
+#  hystrix:
+#    enabled: true
+#  httpclient:
+#    enabled: false
+#  okhttp:
+#    enabled: true
+
+
+  # 开启饥饿加载模式
+ribbon:
+  eager-load:
+    enabled: true
+    # 指定加载的客户端名称
+    clients: feign-service-demo
+
+
+
+logging:
+  level:
+    com.zhq.all.api.feign.HelloFeign: debug

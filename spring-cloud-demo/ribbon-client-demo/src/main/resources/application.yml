@@ -1,0 +1,17 @@
+server:
+  port: 18081
+
+
+spring:
+  application:
+    name: ribbon-client-demo
+
+
+# 不通过eureka进行调用，直接配置服务提供者的地址
+# 局部配置，单独指定服务
+ribbon-service-demo:
+  ribbon:
+    listOfServers: localhost:18082
+
+
+
