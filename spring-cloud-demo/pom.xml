@@ -27,6 +27,9 @@
         <module>ribbon-eureka-demo</module>
         <module>hystrix-demo</module>
         <module>hystrix-web-demo</module>
+        <module>gateway-zuul-demo</module>
+        <module>stream-kafka-producer-demo</module>
+        <module>stream-kafka-consumer-demo</module>
     </modules>
 
     <properties>
