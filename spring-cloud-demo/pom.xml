@@ -30,6 +30,7 @@
         <module>gateway-zuul-demo</module>
         <module>stream-kafka-producer-demo</module>
         <module>stream-kafka-consumer-demo</module>
+        <module>stream-kafka</module>
     </modules>
 
     <properties>
